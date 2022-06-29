@@ -1,48 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
+/*   ft_abs.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elel-yak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/19 20:31:02 by elel-yak          #+#    #+#             */
-/*   Updated: 2022/06/21 21:10:24 by elel-yak         ###   ########.fr       */
+/*   Created: 2022/06/26 12:31:18 by elel-yak          #+#    #+#             */
+/*   Updated: 2022/06/26 17:37:00 by elel-yak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_is_prime(int nb)
-{
-	int	i;
+#ifndef FT_ABS_H
+# define FT_ABS_H
 
-	i = 2;
-	if (nb < 2)
-		return (0);
-	while (i <= nb / i)
-	{
-		if (nb % i == 0)
-			return (0);
-		i++;
-	}
-	return (1);
-}
+# define ABS(value) ((value < 0 ? -value : value))
 
-int	ft_find_next_prime(int nb)
-{
-	if (nb < 2)
-		return (2);
-	while (nb >= 2)
-	{
-		if (ft_is_prime(nb) == 1)
-			return (nb);
-		nb++;
-	}
-	return (0);
-}
-
-#include <stdio.h>
-
-int main ()
-{
-	printf("%d", ft_find_next_prime(2147483555));
-	return(0);
-}
+#endif

@@ -1,48 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
+/*   ft.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elel-yak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/19 20:31:02 by elel-yak          #+#    #+#             */
-/*   Updated: 2022/06/21 21:10:24 by elel-yak         ###   ########.fr       */
+/*   Created: 2022/06/25 18:51:02 by elel-yak          #+#    #+#             */
+/*   Updated: 2022/06/29 16:31:03 by elel-yak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#ifndef FT_H
+# define FT_H
 
-int	ft_is_prime(int nb)
-{
-	int	i;
+void	ft_putchar(char c);
+void	ft_swap(int *a, int *b);
+void	ft_putstr(char *str);
+int		ft_strlen(char *str);
+int		ft_strcmp(char *s1, char *s2);
 
-	i = 2;
-	if (nb < 2)
-		return (0);
-	while (i <= nb / i)
-	{
-		if (nb % i == 0)
-			return (0);
-		i++;
-	}
-	return (1);
-}
-
-int	ft_find_next_prime(int nb)
-{
-	if (nb < 2)
-		return (2);
-	while (nb >= 2)
-	{
-		if (ft_is_prime(nb) == 1)
-			return (nb);
-		nb++;
-	}
-	return (0);
-}
-
-#include <stdio.h>
-
-int main ()
-{
-	printf("%d", ft_find_next_prime(2147483555));
-	return(0);
-}
+#endif
