@@ -8,5 +8,5 @@
 </p>
 
 <p align="center">
-    <img src="https://github.com/pix3l-p33p3r/42-pool/blob/master/marvin.jpg" width="800">
+    <img src="https://github.com/pix3l-p33p3r/42-pool/blob/main/marvin.jpg" width="800">
 </p>
